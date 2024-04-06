@@ -1,0 +1,37 @@
+.status {
+  min-width: 300px;
+  width: 75%;
+  background-color: black;
+  color:white;
+  background-color: #202020;
+  border-radius: 1px;
+}
+
+.footer {
+  background-color: red;
+  color: black;
+}
+
+.article-main {
+  border: 1px white solid;
+}
+
+.content {
+  font-family: "Comic Sans MS", "Comic Sans", cursive;
+  margin: 5px;
+  font-size: 14pt;
+}
+
+.date {
+  font-size: 8pt;
+  color: #cacaca;
+}
+
+img {
+  max-width: 200px;
+}
+
+.status-content {
+  display: flex;
+  flex-wrap: wrap;
+}

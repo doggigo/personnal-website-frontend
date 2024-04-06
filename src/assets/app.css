@@ -1,0 +1,11 @@
+#statuses {
+  display: flex;
+  place-items: center;
+  flex-direction: column;
+  gap: 5vh;
+}
+
+#app {
+  display: flex;
+  justify-content: center;
+}
