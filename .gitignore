@@ -1,18 +1,5 @@
 # Based on https://raw.githubusercontent.com/github/gitignore/main/Node.gitignore
 
-# Bun
-bun.lockb
-
-# Typescript
-tsconfig.json
-tsconfig.node.json
-
-# Vite
-vite.config.ts
-
-# Eslint
-.eslintrc.cjs
-
 # Logs
 logs
 _.log
