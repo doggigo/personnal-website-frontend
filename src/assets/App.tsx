@@ -13,7 +13,7 @@ export default function App() {
   const [statuses, setStatuses] = useState<Array<StatusesInterface>>();
 
   const fetchStatuses = async () => {
-    let statusesReq = await fetch("http://localhost:3000/statuses", {
+    let statusesReq = await fetch("api/statuses", {
       mode: "cors",
     });
     setStatuses(await statusesReq.json());
