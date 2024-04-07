@@ -37,6 +37,8 @@ export default function SendMessageBox() {
       body: JSON.stringify(body),
       mode: "cors",
     });
+    setTitle("");
+    setMessageContent("");
     return;
   };
 
@@ -48,11 +50,13 @@ export default function SendMessageBox() {
         name="titre"
         placeholder="titre"
         onChange={handleTitleChange}
+        value={title}
       />
       <textarea
         name="messageContent"
         id="messageContentArea"
         onChange={handleMessageContentChange}
+        value={messageContent}
       ></textarea>
       <button onClick={handleFormSubmit}>Envoyer</button>
       <span className="success"></span>
