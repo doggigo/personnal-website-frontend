@@ -14,7 +14,7 @@ export default function App() {
   const [statuses, setStatuses] = useState<Array<StatusesInterface>>();
 
   const fetchStatuses = async () => {
-    let statusesReq = await fetch("api/statuses", {
+    let statusesReq = await fetch("/statuses", {
       mode: "cors",
     });
     setStatuses(await statusesReq.json());
@@ -28,13 +28,6 @@ export default function App() {
     <div id="app">
       <Profile />
       <div id="statuses">
-        <Status
-          key={1}
-          title={"sava"}
-          content={"yo la mife"}
-          date={Date.now() / 1000}
-        />
-
         {statuses?.map((status) => (
           <Status
             key={status.id}
