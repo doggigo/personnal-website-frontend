@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import Status from "./Status";
 import "./app.css";
+import Profile from "./Profile";
 
 export interface StatusesInterface {
   title: string;
@@ -21,24 +22,28 @@ export default function App() {
 
   useEffect(() => {
     fetchStatuses();
-    console.log(statuses);
   }, []);
 
   return (
     <div id="app">
+      <Profile />
       <div id="statuses">
-        {statuses?.map((status) => 
-          (
-            <Status
-              key={status.id}
-              title={status.title}
-              content={status.content}
-              date={status.date}
-            />
-          )
-        )}
+        <Status
+          key={1}
+          title={"sava"}
+          content={"yo la mife"}
+          date={Date.now() / 1000}
+        />
+
+        {statuses?.map((status) => (
+          <Status
+            key={status.id}
+            title={status.title}
+            content={status.content}
+            date={status.date}
+          />
+        ))}
       </div>
-      <div className="profile"></div>
     </div>
   );
 }

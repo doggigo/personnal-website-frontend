@@ -2,6 +2,38 @@
   color: red;
 }
 
+.color-orange {
+  color:orange ;
+}
+
+.color-yellow {
+  color:yellow ;
+}
+
+.color-lightgreen {
+  color: greenyellow;
+}
+
+.color-green {
+  color: green;
+}
+
+.color-blue{
+  color: blue;
+}
+
+.color-purple {
+  color:rgb(109, 13, 117) ;
+}
+
+.color-lightpurple {
+  color: violet
+}
+
+.color-lightred {
+  color: rgb(236, 118, 118);
+}
+
 .color-white {
   color: white;
 }
@@ -9,7 +41,6 @@
 .color-blue {
   color: blue;
 }
-
-.color-green {
-  color: green;
+.color-black {
+  color: black;
 }

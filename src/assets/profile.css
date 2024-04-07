@@ -1,0 +1,29 @@
+.profile {
+  background-color: red;
+  width: 200px;
+  height: inherit;
+  min-height: 500px;
+  display: flex;
+  flex-direction: column;
+}
+
+.biography > img {
+  height: 100px;
+
+}
+
+.socials > img {
+  width: 30px;
+}
+
+.socials {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2px;
+  justify-content: center;
+}
+
+.username {
+  font-size: 20pt;
+}

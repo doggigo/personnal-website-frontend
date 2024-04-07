@@ -1,6 +1,6 @@
 import './textcolors.css';
 
-function formatMessage(message: string) {
+export function formatMessage(message: string) {
   let elements = new Array<JSX.Element>();
   let bufferMessage = "";
   let currentColor = "white";
