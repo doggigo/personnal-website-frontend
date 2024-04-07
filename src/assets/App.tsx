@@ -27,12 +27,6 @@ export default function App() {
   return (
     <div id="app">
       <div id="statuses">
-        <Status title="HEY" content="hey" date={0} />
-        <Status
-          title="Hello"
-          content="&blue vlog d'aout {https://cdn.futura-sciences.com/cdn-cgi/image/width=1760,quality=50,format=auto/sources/images/actu/esperance-vie-chiens-chiot-golden-retriever.jpg} &white hello"
-          date={0}
-        />
         {statuses?.map((status) => 
           (
             <Status
