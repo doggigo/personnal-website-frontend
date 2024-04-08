@@ -26,8 +26,10 @@ export default function App() {
 
   return (
     <div id="app">
+    
       <Profile />
       <div id="statuses">
+        <Status key={1} content='hey' title="sava" date={0}/>
         {statuses?.map((status) => (
           <Status
             key={status.id}

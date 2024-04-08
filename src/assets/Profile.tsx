@@ -12,10 +12,10 @@ export default function Profile() {
         <br />
       </div>
       <div className="socials">
-        <a href="https://x.com/chientresfou"><img src="Twitter.jpg" alt="Twitter" id="twitter" /></a>
+        <a href="https://x.com/chientresfou" target="_blank" rel="noopener noreferrer"><img src="Twitter.jpg" alt="Twitter" id="twitter" /></a>
         
-        <a href="https://discord.gg/2BWhst2bV5"><img src="Discord.jpg" alt="Discord" id="discord" /></a>
-        <a href="https://github.com/doggigo"><img src="GitHub.jpg" alt="GitHub" id="github" /></a>
+        <a href="https://discord.gg/2BWhst2bV5" target="_blank" rel="noopener noreferrer"><img src="Discord.jpg" alt="Discord" id="discord" /></a>
+        <a href="https://github.com/doggigo" target="_blank" rel="noopener noreferrer"><img src="GitHub.jpg" alt="GitHub" id="github" /></a>
       </div>
        <SendMessageBox />
     </div>
