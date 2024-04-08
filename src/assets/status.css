@@ -1,5 +1,6 @@
 .status {
   min-width: 300px;
+  max-width: 20vh;
   width: 75%;
   background-color: black;
   color:white;
