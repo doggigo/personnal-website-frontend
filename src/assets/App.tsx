@@ -26,7 +26,6 @@ export default function App() {
 
   return (
     <div id="app">
-    
       <Profile />
       <div id="statuses">
         {statuses?.map((status) => (

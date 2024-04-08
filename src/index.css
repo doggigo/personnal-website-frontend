@@ -1,3 +1,18 @@
 html{
   background: black;
 }
+
+/* width */
+::-webkit-scrollbar {
+  width: 20px;
+  height: 100%;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  outline-offset: -5px;
+  outline: black solid 5px;
+  background: #2e2e2e;
+  border-radius: 10px;
+
+}

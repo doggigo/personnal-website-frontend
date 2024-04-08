@@ -1,31 +1,42 @@
-import './textcolors.css';
+import "./textcolors.css";
 
 export function formatMessage(message: string) {
   let elements = new Array<JSX.Element>();
   let bufferMessage = "";
   let currentColor = "white";
   let i = 0;
-  if(!message) return;
+  if (!message) return;
 
-  for (let e of message.split(' ')) {
+  for (let e of message.split(" ")) {
     if (e.startsWith("&")) {
-      if(bufferMessage !== "") {
-        elements.push(<span className={`color-${currentColor}`} key={i}>{bufferMessage}</span>);
+      if (bufferMessage !== "") {
+        elements.push(
+          <span className={`color-${currentColor}`} key={i}>
+            {bufferMessage}
+          </span>
+        );
         bufferMessage = "";
       }
       currentColor = e.substring(1);
-
     } else if (e.startsWith("{")) {
-      elements.push(<span className={`color-${currentColor}`} key={i}>{bufferMessage}</span>);
+      elements.push(
+        <span className={`color-${currentColor}`} key={i}>
+          {bufferMessage}
+        </span>
+      );
       bufferMessage = "";
       i++;
-      elements.push(<img src={e.substring(1,e.length - 1)} key={i}></img>);
+      elements.push(<img src={e.substring(1, e.length - 1)} key={i}></img>);
     } else {
-      bufferMessage += e + ' ';
+      bufferMessage += e + " ";
     }
     i++;
   }
-  elements.push(<span className={`color-${currentColor}`} key={i}>{bufferMessage}</span>);
+  elements.push(
+    <span className={`color-${currentColor}`} key={i}>
+      {bufferMessage}
+    </span>
+  );
 
   return elements;
 }

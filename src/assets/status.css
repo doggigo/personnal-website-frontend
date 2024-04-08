@@ -1,20 +1,18 @@
 .status {
   min-width: 300px;
-  max-width: 25vh;
-  width: 75%;
+  max-width: 30vh;
   background-color: black;
-  color:white;
+  color: white;
   background-color: #202020;
   border-radius: 1px;
 }
-
 
 .footer {
   background-color: red;
   color: black;
 }
 
-.article-main {
+.status-main {
   border: 1px white solid;
 }
 
@@ -36,4 +34,5 @@ img {
 .status-content {
   display: flex;
   flex-wrap: wrap;
+  overflow: hidden;
 }

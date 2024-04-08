@@ -17,7 +17,7 @@ export default function Status({ title, content, date }: StatusProps) {
       <div className="footer">
         <p className="title">{title}</p>
       </div>
-      <div className="article-main">
+      <div className="status-main">
         <StatusContent content={content}/>
         <p className="date">{convertTime(date)}</p>
       </div>
