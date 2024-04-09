@@ -32,6 +32,7 @@
   padding-top: 15px;
   display: flex;
   flex-direction: column;
+  resize: none;
 }
 
 #send-form-button {

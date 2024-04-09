@@ -1,7 +1,9 @@
-import { useState } from "react";
+import { useRef, useState } from "react";
 import { handleFile } from "../crypto.ts";
 
 export default function SendMessageBox() {
+  const inputRef = useRef<HTMLInputElement | null>(null);
+
   const [file, setFile] = useState<File>();
   const [title, setTitle] = useState<string>();
   const [messageContent, setMessageContent] = useState<string>();
@@ -31,7 +33,6 @@ export default function SendMessageBox() {
       content: messageContent,
       secretKey: hashedFile,
     };
-    console.log(body);
     await fetch("api/new-status", {
       method: "POST",
       body: JSON.stringify(body),
@@ -42,9 +43,16 @@ export default function SendMessageBox() {
     return;
   };
 
+  const handleFileButtonClick = () => {
+    if (!inputRef.current) return;
+    inputRef.current?.click();
+  }
+
   return (
-    <div id='send-message-box'>
-      <input type="file" name="file" id="keyFile" onChange={handleFileChange} />
+    <div id="send-message-box">
+      <input type="file" ref={inputRef} style={ {'display' : 'none'}} onChange={handleFileChange}/>
+      <button onClick={handleFileButtonClick}>METTRE LA CLÉ SECRÈTE</button>
+      {file ? <div className="color-rainbow">{file.name}</div> : null}
       <input
         type="text"
         name="titre"
@@ -58,7 +66,10 @@ export default function SendMessageBox() {
         onChange={handleMessageContentChange}
         value={messageContent}
       ></textarea>
-      <button onClick={handleFormSubmit} id='send-form-button'>Envoyer</button>
+
+      <button onClick={handleFormSubmit} id="send-form-button">
+        Envoyer
+      </button>
       <span className="success"></span>
     </div>
   );

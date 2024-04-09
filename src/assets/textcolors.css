@@ -1,46 +1,99 @@
+:root {
+  --red: red;
+  --orange: orange;
+  --yellow: yellow;
+  --lightgreen: greenyellow;
+  --green: green;
+  --blue: blue;
+  --lightblue: rgb(25, 204, 228);
+  --purple: rgb(109, 13, 117);
+  --lightpurple: violet;
+  --lightred: rgb(236, 118, 118);
+}
+
 .color-red {
-  color: red;
+  color: var(--red);
 }
 
 .color-orange {
-  color:orange ;
+  color:var(--orange);
 }
 
 .color-yellow {
-  color:yellow ;
+  color:var(--yellow);
 }
 
 .color-lightgreen {
-  color: greenyellow;
+  color: var(--lightgreen);
 }
 
 .color-green {
-  color: green;
+  color: var(--green);
 }
 
 .color-blue{
-  color: blue;
+  color: var(--blue);
 }
 
 .color-purple {
-  color:rgb(109, 13, 117) ;
+  color: var(--purple) ;
 }
 
 .color-lightpurple {
-  color: violet
+  color: var(--lightpurple)
 }
 
 .color-lightred {
-  color: rgb(236, 118, 118);
+  color: var(--lightred);
 }
 
 .color-white {
   color: white;
 }
 
-.color-blue {
-  color: blue;
-}
 .color-black {
   color: black;
+}
+
+.color-rainbow {
+  animation: rainbow 5s linear infinite;
+}
+
+@keyframes rainbow{
+  100%,0%{
+    color: rgb(255,0,0);
+  }
+  8%{
+    color: rgb(255,127,0);
+  }
+  16%{
+    color: rgb(255,255,0);
+  }
+  25%{
+    color: rgb(127,255,0);
+  }
+  33%{
+    color: rgb(0,255,0);
+  }
+  41%{
+    color: rgb(0,255,127);
+  }
+  50%{
+    color: rgb(0,255,255);
+  }
+  58%{
+    color: rgb(0,127,255);
+  }
+  66%{
+    color: rgb(0,0,255);
+  }
+  75%{
+    color: rgb(127,0,255);
+  }
+  83%{
+    color: rgb(255,0,255);
+  }
+  91%{
+    color: rgb(255,0,127);
+  }
 }
