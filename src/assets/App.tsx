@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
-import Status from "./Status";
+import Status from "./status/Status";
 import "./app.css";
-import Profile from "./Profile";
+import Profile from "./profile/Profile";
 
 export interface StatusesInterface {
   title: string;

@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { handleFile } from "./crypto.ts";
+import { handleFile } from "../crypto.ts";
 
 export default function SendMessageBox() {
   const [file, setFile] = useState<File>();
@@ -12,14 +12,14 @@ export default function SendMessageBox() {
   };
 
   const handleTitleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-    if (!e.target.value) return;
     setTitle(e.target.value);
   };
 
   const handleMessageContentChange = (
     e: React.ChangeEvent<HTMLTextAreaElement>
   ) => {
-    if (!e.target.value) return;
+    e.target.style.height = "";
+    e.target.style.height = e.target.scrollHeight + "px";
     setMessageContent(e.target.value);
   };
 
@@ -43,7 +43,7 @@ export default function SendMessageBox() {
   };
 
   return (
-    <div>
+    <div id='send-message-box'>
       <input type="file" name="file" id="keyFile" onChange={handleFileChange} />
       <input
         type="text"
@@ -58,7 +58,7 @@ export default function SendMessageBox() {
         onChange={handleMessageContentChange}
         value={messageContent}
       ></textarea>
-      <button onClick={handleFormSubmit}>Envoyer</button>
+      <button onClick={handleFormSubmit} id='send-form-button'>Envoyer</button>
       <span className="success"></span>
     </div>
   );

@@ -34,5 +34,5 @@ img {
 .status-content {
   display: flex;
   flex-wrap: wrap;
-  overflow: hidden;
+  overflow: show;
 }

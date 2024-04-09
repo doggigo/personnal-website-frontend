@@ -27,3 +27,13 @@
 .username {
   font-size: 20pt;
 }
+
+#send-message-box {
+  padding-top: 15px;
+  display: flex;
+  flex-direction: column;
+}
+
+#send-form-button {
+  font-family: "Comic Sans MS";
+}
