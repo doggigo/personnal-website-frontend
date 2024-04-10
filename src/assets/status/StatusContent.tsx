@@ -64,13 +64,13 @@ export function formatMessage(message: string) {
 
   for (let e of message.replace(/\n/g, " ").split(" ")) {
     if (e.startsWith("&")) {
-      if (bufferMessage !== " ") {
+      if (bufferMessage !== "") {
         elements.push(
           <span className={`color-${currentColor}`} key={i}>
             {bufferMessage}
           </span>
         );
-        bufferMessage = "";
+        bufferMessage = " ";
       }
       currentColor = e.substring(1);
     } else if (e.startsWith("{") && e.endsWith("}")) {
