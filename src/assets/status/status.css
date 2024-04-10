@@ -38,5 +38,6 @@ img {
 }
 
 .status-content >  span {
+  display: inline-block;
   white-space: pre;
 }
