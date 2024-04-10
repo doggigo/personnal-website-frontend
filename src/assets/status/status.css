@@ -40,4 +40,5 @@ img {
 .status-content >  span {
   display: inline-block;
   white-space: pre;
+  max-width: 100%;
 }
