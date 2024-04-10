@@ -39,7 +39,6 @@ img {
 
 .status-content >  span {
   display: inline-block;
-  white-space: pre;
-  word-wrap: break-word;
+  white-space: pre-wrap;
   max-width: 100%;
 }
