@@ -36,3 +36,7 @@ img {
   flex-wrap: wrap;
   overflow: show;
 }
+
+.status-content >  span {
+  white-space: pre;
+}

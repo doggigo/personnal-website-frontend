@@ -2,14 +2,14 @@ import '../textcolors.css';
 
 export function formatMessage(message: string) {
   let elements = new Array<JSX.Element>();
-  let bufferMessage = '';
+  let bufferMessage = ' ';
   let currentColor = 'white';
   let i = 0;
   if (!message) return;
 
-  for (let e of message.split(' ')) {
+  for (let e of message.split(/[\s (\r?\n)]/)) {
     if (e.startsWith('&')) {
-      if (bufferMessage !== '') {
+      if (bufferMessage !== ' ') {
         elements.push(
           <span className={`color-${currentColor}`} key={i}>
             {bufferMessage}
@@ -24,7 +24,7 @@ export function formatMessage(message: string) {
           {bufferMessage}
         </span>
       );
-      bufferMessage = '';
+      bufferMessage = ' ';
       i++;
       elements.push(<img src={e.substring(1, e.length - 1)} key={i}></img>);
     } else {
