@@ -7,7 +7,7 @@ export function formatMessage(message: string) {
   let i = 0;
   if (!message) return;
 
-  for (let e of message.split(/[\s (\r?\n)]/)) {
+  for (let e of message.replace( /\n/g, " " ).split( " " )) {
     if (e.startsWith('&')) {
       if (bufferMessage !== ' ') {
         elements.push(
