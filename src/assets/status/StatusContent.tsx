@@ -74,7 +74,7 @@ export function formatMessage(message: string) {
       }
       currentColor = e.substring(1);
     } else if (e.startsWith("{") && e.endsWith("}")) {
-      elements.push(<span className={`color-${currentColor}`} key={i}></span>);
+      elements.push(<span className={`color-${currentColor}`} key={i}>{bufferMessage}</span>);
       bufferMessage = " ";
       i++;
       elements.push(handleMediaString(e, i));
