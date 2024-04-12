@@ -2,12 +2,12 @@ import "./status.css";
 import StatusContent from "./StatusContent";
 
 function convertTime(timestamp: number){
-  var a = new Date(timestamp * 1000);
-  var year = a.getFullYear();
-  var month = a.getMonth() + 1;
-  var date = a.getDate();
-  var hour = a.getHours();
-  var min = a.getMinutes();
+  const a = new Date(timestamp * 1000);
+  const year = a.getFullYear();
+  const month = a.getMonth() + 1;
+  const date = a.getDate();
+  const hour = a.getHours();
+  const min = a.getMinutes();
   return `${date.toString().padStart(2, '0')}/${month.toString().padStart(2, '0')}/${year} ${hour.toString().padStart(2, '0')}:${min.toString().padStart(2, '0')}`;
 }
 

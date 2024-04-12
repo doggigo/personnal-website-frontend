@@ -27,8 +27,8 @@ export default function SendMessageBox() {
 
   const handleFormSubmit = async () => {
     if (!file) return;
-    let hashedFile = await handleFile(file);
-    let body = {
+    const hashedFile = await handleFile(file);
+    const body = {
       title: title,
       content: messageContent,
       secretKey: hashedFile,

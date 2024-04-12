@@ -1,18 +1,18 @@
 import "../textcolors.css";
 
-type color =
-  | "red"
-  | "orange"
-  | "yellow"
-  | "lightgreen"
-  | "green"
-  | "blue"
-  | "purple"
-  | "lightpurple"
-  | "lightred"
-  | "white"
-  | "black"
-  | "rainbow";
+// type color =
+//   | "red"
+//   | "orange"
+//   | "yellow"
+//   | "lightgreen"
+//   | "green"
+//   | "blue"
+//   | "purple"
+//   | "lightpurple"
+//   | "lightred"
+//   | "white"
+//   | "black"
+//   | "rainbow";
 
 export function handleMediaString(mediaString: string, key: number) {
   const link = mediaString.substring(1, mediaString.length - 1);
@@ -56,13 +56,13 @@ export function handleMediaString(mediaString: string, key: number) {
 }
 
 export function formatMessage(message: string) {
-  let elements = new Array<JSX.Element>();
+  const elements = new Array<JSX.Element>();
   let bufferMessage = " ";
   let currentColor = "white";
   let i = 0;
   if (!message) return;
 
-  for (let e of message.replace(/\n/g, " ").split(" ")) {
+  for (const e of message.replace(/\n/g, " ").split(" ")) {
     if (e.startsWith("&")) {
       if (bufferMessage !== "") {
         elements.push(
